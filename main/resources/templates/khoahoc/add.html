@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org"
+    xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Them khoa hoc</h1>
+	<form method="post" th:action="@{/khoahoc/add}" th:object="${khoahoc}">
+		<table>
+			<tr>
+				<td>Ten</td>
+				<td><input type="text" placeholder="Ten sinh vien" name="nameKH"/></td>
+			</tr>
+			<tr>
+				<td><button>Save</button></td>
+			</tr>
+		</table>
+		
+		
+		
+	</form>
+</body>
+</html>

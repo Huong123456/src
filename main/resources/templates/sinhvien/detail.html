@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org"
+    xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>Sinh vien</title>
+</head>
+<body>
+	<h1>Chi tiet sinh vien</h1>
+	<div>
+		<b>ID</b><p th:utext="${detail.id}"></p>
+	</div>
+	<div>
+		<b>Ten</b><p th:utext="${detail.nameSV}"></p>
+	</div>
+	<div>
+		<b>Dia chi</b><p th:utext="${detail.address}"></p>
+	</div>
+	<div>
+		<b>Email</b><p th:utext="${detail.email}"></p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org"
+    xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>Sinh vien</title>
+</head>
+<body>
+	<h1>Danh sach Khoa hoc</h1>
+	<a th:href="@{/khoahoc/add}">Them khoa hoc</a>
+	<table border="1">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Ten</th>
+                <th>Actions</th>
+                
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="khoahoc : ${khoahoc}">
+                <td th:utext="${khoahoc.id}">Text ...</td>
+                <td th:utext="${khoahoc.nameKH}">Text ...</td>
+                
+                <td>
+                	<a th:href="${'/khoahoc/detail/' + khoahoc.id}">Detail</a>
+                	<a th:href="${'/khoahoc/update/' + khoahoc.id}">Edit</a>
+                	<a th:href="${'/khoahoc/delete/' + khoahoc.id}">Delete</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+</body>
+</html>
